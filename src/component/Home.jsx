@@ -35,8 +35,10 @@ const Home = () => {
 
         {/* Text Content */}
         <div className="text-content">
-          <h1 className="main-title">NARI-NEXUS</h1>
-          <h2 className="sub-title">Coming Soon</h2>
+          <h1 className="main-title">NariNexus</h1>
+          <p className="sub-title">Sanyoge Shaktiḥ, Navonnati Mārga - In connection, there is strength; in innovation, there is progress.</p>
+          <br></br>
+          <p className="sub-title">comming soon</p>
         </div>
       </div>
 
@@ -168,7 +170,7 @@ const Home = () => {
         }
         
         .main-title {
-          font-family: 'Courier New', monospace;
+          font-family: 'grape nut', ;
           font-size: clamp(3rem, 8vw, 6rem);
           font-weight: 700;
           margin: 0;
@@ -177,16 +179,17 @@ const Home = () => {
           line-height: 1.1;
         }
         
-        .sub-title {
-          font-family: 'Courier New', monospace;
-          font-size: clamp(1.5rem, 4vw, 3rem);
-          font-weight: 400;
-          margin: 0.5rem 0 0 0;
-          color: #cccccc;
-          letter-spacing: 0.2em;
-          opacity: 0;
-          animation: fadeInUp 1s ease-out 1.8s forwards;
-        }
+       .sub-title {
+  font-family: 'Grapenut', 'Poppins',  ;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);  
+  font-weight: 400;  
+  color: #cccccc;
+  letter-spacing: 1px;  
+  line-height: 1.5;  
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 1.8s forwards;
+}
+
         
         @keyframes fadeInUp {
           0% {
