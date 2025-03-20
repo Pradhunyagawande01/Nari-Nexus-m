@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clickspark-container {
+    position: absolute; /* Ya fixed bhi use kar sakte ho */
+    top: 0;
+    left: 0;
+    width: 100vw;  /* Full width of viewport */
+    height: 100vh; /* Full height of viewport */
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
