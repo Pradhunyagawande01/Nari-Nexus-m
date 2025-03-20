@@ -1,5 +1,5 @@
 import { useRef, useEffect, useCallback } from "react";
-import "./ClickSpark.css";
+import "./ClickSpark.css"; // Optional if you have styles
 
 const ClickSpark = ({
   sparkColor = "#fff",
@@ -9,7 +9,7 @@ const ClickSpark = ({
   duration = 400,
   easing = "ease-out",
   extraScale = 1.0,
-  children
+  children,
 }) => {
   const canvasRef = useRef(null);
   const sparksRef = useRef([]);     
@@ -77,6 +77,10 @@ const ClickSpark = ({
       }
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+      if (sparksRef.current.length === 0) {
+        console.log("No sparks to draw"); // Debugging: Check if sparks exist
+      }
+
       sparksRef.current = sparksRef.current.filter((spark) => {
         const elapsed = timestamp - spark.startTime;
         if (elapsed >= duration) {
@@ -123,6 +127,7 @@ const ClickSpark = ({
   ]);
 
   const handleClick = (e) => {
+    console.log("Click detected!"); // Debugging click event
     const canvas = canvasRef.current;
     if (!canvas) return;
     const rect = canvas.getBoundingClientRect();
@@ -143,14 +148,14 @@ const ClickSpark = ({
   return (
     <div 
       style={{
-  position: 'fixed',  // Fixed to cover entire screen
-  top: 0,
-  left: 0,
-  width: '100vw',  // Full viewport width
-  height: '100vh', // Full viewport height
-  zIndex: -10000 // Ensure it's behind other elements
-}}
-
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100vw",
+        height: "100vh",
+        zIndex: 1000, // Ensure it's clickable
+        pointerEvents: "auto", // Allow clicks
+      }}
       onClick={handleClick}
     >
       <canvas
@@ -163,7 +168,7 @@ const ClickSpark = ({
           position: "absolute",
           top: 0,
           left: 0,
-          pointerEvents: "none"
+          pointerEvents: "none", // Prevent canvas from blocking clicks
         }}
       />
       {children}
