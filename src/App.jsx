@@ -1,26 +1,31 @@
-import React from "react";
-import Threads from "./Threads";
-import Home from "./component/Home"; // Import Home Component
-import ClickSpark from "./ClickSpark"; // Ensure ClickSpark is correctly imported
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Layout from "./components/Layout"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import Initiatives from "./pages/Initiatives"
+// import SuccessStories from "./pages/SuccessStories"
+// import Events from "./pages/Events"
+// import Join from "./pages/Join"
+// import Gallery from "./pages/Gallery"
+// import Contact from "./pages/Contact"
 
 function App() {
   return (
-    <ClickSpark
-      sparkColor="#fff"
-      sparkSize={10}
-      sparkRadius={15}
-      sparkCount={8}
-      duration={400}
-    >
-      <div style={{ width: "100%", height: "100vh", position: "relative" }}>
-        {/* Threads Background */}
-        <Threads amplitude={1} distance={0} enableMouseInteraction={true} />
-
-        {/* Home Component */}
-        <Home />
-      </div>
-    </ClickSpark>
-  );
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="initiatives" element={<Initiatives />} />
+          {/* <Route path="success-stories" element={<SuccessStories />} />
+          <Route path="events" element={<Events />} />
+          <Route path="join" element={<Join />} />
+          <Route path="gallery" element={<Gallery />} />
+          <Route path="contact" element={<Contact />} /> */}
+        </Route>
+      </Routes>
+    </Router>
+  )
 }
 
-export default App;
+export default App
