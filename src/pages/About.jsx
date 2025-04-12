@@ -1,285 +1,282 @@
-function About() {
-    return (
-      <div>
-        {/* About Hero */}
-        <section className="bg-purple-800 text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About Nari-Nexus</h1>
-            <p className="text-xl max-w-3xl mx-auto">
-              Empowering women through community, education, and advocacy since 2018.
+import { Users, Heart, Globe, Target, TrendingUp, Shield } from "lucide-react";
+import SectionTitle from "../components/SectionTitle";
+import Button from "../components/Button";
+import GeometricBackground from "../components/GeometricBackground";
+
+const About = () => {
+  return (
+    <div className="pt-20">
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <GeometricBackground className="opacity-40" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-600 to-orange-500">
+              About Nari-Nexus
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              We’re not waiting for doors to open we’re building our own.
             </p>
           </div>
-        </section>
-  
-        {/* Mission and Vision */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row items-center gap-12">
-              <div className="md:w-1/2">
-                <img
-                  src="/placeholder.svg?height=400&width=600"
-                  alt="Women in a workshop"
-                  className="rounded-lg shadow-lg"
-                />
+        </div>
+      </section>
+
+      {/* Our Story */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <SectionTitle
+                title="Our Story"
+                subtitle="How We Started"
+                titleGradient="from-pink-500 to-purple-600"
+              />
+
+              <p className="text-gray-300 mb-6">
+                A belief that women belong in tech not just as participants, but
+                as leaders, innovators, and changemakers.
+              </p>
+
+              <p className="text-gray-300 mb-6">
+                We’re a community-driven initiative created to bridge the gender
+                divide in technology by offering opportunities for learning,
+                growth, and leadership while welcoming allies who share our
+                vision for a more inclusive tech world.
+              </p>
+
+              <p className="text-gray-300">
+                Through nationwide hackathons, workshops, mentorship circles,
+                and community events, we’re creating space for skill-building,
+                confidence-boosting, and voice-lifting.
+              </p>
+            </div>
+
+            <div className="relative">
+              <div className="aspect-square max-w-md mx-auto bg-gradient-to-br from-pink-500 via-purple-600 to-orange-500 rounded-2xl p-1">
+                <div className="w-full h-full bg-black rounded-xl overflow-hidden">
+                  <img
+                    src="img/Kritika.jpg"
+                    alt="Nari-Nexus founding members"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
-              <div className="md:w-1/2">
-                <h2 className="text-3xl font-bold mb-6 text-purple-800">Our Mission</h2>
-                <p className="text-gray-700 mb-6">
-                  Nari-Nexus is dedicated to empowering women by providing resources, education, and a supportive
-                  community that enables them to achieve their full potential in all aspects of life.
-                </p>
-                <p className="text-gray-700 mb-6">
-                  We believe that when women are empowered, entire communities thrive. Our mission is to create a world
-                  where every woman has the opportunity to develop her skills, pursue her passions, and make meaningful
-                  contributions to society.
-                </p>
-  
-                <h2 className="text-3xl font-bold mb-6 text-purple-800">Our Vision</h2>
-                <p className="text-gray-700">
-                  A world where women are equally represented in leadership, business, and decision-making roles, and
-                  where every woman has the support and resources she needs to thrive personally and professionally.
-                </p>
-              </div>
+
+              {/* Decorative elements */}
+              <div className="absolute -top-6 -right-6 w-24 h-24 bg-purple-600/30 rounded-xl rotate-12"></div>
+              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-orange-500/30 rounded-xl -rotate-12"></div>
             </div>
           </div>
-        </section>
-  
-        {/* Our Values */}
-        <section className="py-16 bg-purple-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-purple-800">Our Core Values</h2>
-  
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg p-8 shadow-md">
-                <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <svg
-                    className="w-8 h-8 text-pink-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-center mb-4 text-purple-800">Community</h3>
-                <p className="text-gray-700 text-center">
-                  We believe in the power of connection and support. Our community is built on mutual respect, empathy,
-                  and collaboration.
-                </p>
+        </div>
+      </section>
+
+      {/* Our Values */}
+      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20 relative">
+        <GeometricBackground className="opacity-30" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <SectionTitle
+            title="Our Values"
+            subtitle="What We Stand For"
+            centered={true}
+            titleGradient="from-orange-500 to-pink-500"
+          />
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300">
+              <div className="w-12 h-12 rounded-lg mb-4 flex items-center justify-center bg-gradient-to-r from-pink-500 to-purple-600 text-white">
+                <Heart size={24} />
               </div>
-  
-              <div className="bg-white rounded-lg p-8 shadow-md">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <svg
-                    className="w-8 h-8 text-purple-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-center mb-4 text-purple-800">Empowerment</h3>
-                <p className="text-gray-700 text-center">
-                  We are committed to providing women with the tools, knowledge, and confidence they need to take control
-                  of their lives and futures.
-                </p>
+              <h3 className="text-xl font-bold mb-2">Empathy</h3>
+              <p className="text-gray-300">
+                We lead with compassion recognizing the challenges women face in
+                tech and creating a space where those stories are seen,
+                heard, and respected.
+              </p>
+            </div>
+
+            <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300">
+              <div className="w-12 h-12 rounded-lg mb-4 flex items-center justify-center bg-gradient-to-r from-purple-600 to-orange-500 text-white">
+                <Users size={24} />
               </div>
-  
-              <div className="bg-white rounded-lg p-8 shadow-md">
-                <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <svg
-                    className="w-8 h-8 text-pink-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-center mb-4 text-purple-800">Integrity</h3>
-                <p className="text-gray-700 text-center">
-                  We operate with honesty, transparency, and ethical standards in all that we do, building trust within
-                  our community and beyond.
-                </p>
+              <h3 className="text-xl font-bold mb-2">Inclusion</h3>
+              <p className="text-gray-300">
+                We celebrate diversity and strive to create safe, empowering
+                spaces where every woman feels welcomed, valued, and capable
+                of leading change.
+              </p>
+            </div>
+
+            <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300">
+              <div className="w-12 h-12 rounded-lg mb-4 flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 text-white">
+                <Globe size={24} />
               </div>
+              <h3 className="text-xl font-bold mb-2">Community</h3>
+              <p className="text-gray-300">
+                Change happens through connection. We foster networks of
+                support, collaboration, and collective growth to
+                uplift every voice.
+              </p>
+            </div>
+
+            <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300">
+              <div className="w-12 h-12 rounded-lg mb-4 flex items-center justify-center bg-gradient-to-r from-pink-500 to-orange-500 text-white">
+                <Target size={24} />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Excellence</h3>
+              <p className="text-gray-300">
+                We commit to high standards in everything we do — pushing
+                boundaries and empowering women to reach their
+                fullest potential.
+              </p>
+            </div>
+
+            <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300">
+              <div className="w-12 h-12 rounded-lg mb-4 flex items-center justify-center bg-gradient-to-r from-purple-600 to-pink-500 text-white">
+                <TrendingUp size={24} />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Innovation</h3>
+              <p className="text-gray-300">
+                We spark creativity and practical problem-solving through
+                programs that drive progress and redefine what
+                leadership looks like.
+              </p>
+            </div>
+
+            <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300">
+              <div className="w-12 h-12 rounded-lg mb-4 flex items-center justify-center bg-gradient-to-r from-orange-500 to-purple-600 text-white">
+                <Shield size={24} />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Integrity</h3>
+              <p className="text-gray-300">
+                We stand for transparency, accountability, and ethical action
+                building trust and leading with purpose in all we do.
+              </p>
             </div>
           </div>
-        </section>
-  
-        {/* Our Team */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-purple-800">Meet Our Team</h2>
-  
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Team Member 1 */}
-              <div className="bg-purple-50 rounded-lg p-6 text-center">
-                <img
-                  src="/placeholder.svg?height=150&width=150"
-                  alt="Team member"
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                />
-                <h3 className="text-xl font-semibold mb-2 text-purple-800">Anita Desai</h3>
-                <p className="text-pink-600 mb-4">Founder & Executive Director</p>
-                <p className="text-gray-700 mb-4">
-                  With over 15 years of experience in women's advocacy, Anita founded Nari-Nexus to create a supportive
-                  community for women.
-                </p>
-                <div className="flex justify-center space-x-3">
-                  <a href="#" className="text-purple-600 hover:text-purple-800">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
-                    </svg>
-                  </a>
-                  <a href="#" className="text-purple-600 hover:text-purple-800">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                    </svg>
-                  </a>
-                  <a href="#" className="text-purple-600 hover:text-purple-800">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                  </a>
+        </div>
+      </section>
+
+      {/* Impact */}
+      {/* <section className="py-20">
+        <div className="container mx-auto px-4">
+          <SectionTitle 
+            title="Our Impact" 
+            subtitle="Making A Difference"
+            titleGradient="from-purple-600 to-orange-500"
+          />
+          
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <div className="grid grid-cols-2 gap-6">
+                <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+                  <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 mb-2">10,000+</h3>
+                  <p className="text-gray-300">Women Empowered</p>
                 </div>
-              </div>
-  
-              {/* Team Member 2 */}
-              <div className="bg-purple-50 rounded-lg p-6 text-center">
-                <img
-                  src="/placeholder.svg?height=150&width=150"
-                  alt="Team member"
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                />
-                <h3 className="text-xl font-semibold mb-2 text-purple-800">Meera Patel</h3>
-                <p className="text-pink-600 mb-4">Program Director</p>
-                <p className="text-gray-700 mb-4">
-                  Meera oversees all educational programs and workshops, bringing her background in education and
-                  community development.
-                </p>
-                <div className="flex justify-center space-x-3">
-                  <a href="#" className="text-purple-600 hover:text-purple-800">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
-                    </svg>
-                  </a>
-                  <a href="#" className="text-purple-600 hover:text-purple-800">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                    </svg>
-                  </a>
-                  <a href="#" className="text-purple-600 hover:text-purple-800">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                  </a>
+                
+                <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+                  <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-orange-500 mb-2">30+</h3>
+                  <p className="text-gray-300">Global Chapters</p>
                 </div>
-              </div>
-  
-              {/* Team Member 3 */}
-              <div className="bg-purple-50 rounded-lg p-6 text-center">
-                <img
-                  src="/placeholder.svg?height=150&width=150"
-                  alt="Team member"
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                />
-                <h3 className="text-xl font-semibold mb-2 text-purple-800">Lakshmi Rao</h3>
-                <p className="text-pink-600 mb-4">Mentorship Coordinator</p>
-                <p className="text-gray-700 mb-4">
-                  Lakshmi connects mentors with mentees, creating meaningful relationships that help women advance in
-                  their careers.
-                </p>
-                <div className="flex justify-center space-x-3">
-                  <a href="#" className="text-purple-600 hover:text-purple-800">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
-                    </svg>
-                  </a>
-                  <a href="#" className="text-purple-600 hover:text-purple-800">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                    </svg>
-                  </a>
-                  <a href="#" className="text-purple-600 hover:text-purple-800">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                  </a>
+                
+                <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+                  <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-500 mb-2">500+</h3>
+                  <p className="text-gray-300">Successful Startups</p>
                 </div>
-              </div>
-  
-              {/* Team Member 4 */}
-              <div className="bg-purple-50 rounded-lg p-6 text-center">
-                <img
-                  src="/placeholder.svg?height=150&width=150"
-                  alt="Team member"
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                />
-                <h3 className="text-xl font-semibold mb-2 text-purple-800">Zara Khan</h3>
-                <p className="text-pink-600 mb-4">Community Outreach</p>
-                <p className="text-gray-700 mb-4">
-                  Zara builds partnerships with organizations and businesses to expand our reach and impact in the
-                  community.
-                </p>
-                <div className="flex justify-center space-x-3">
-                  <a href="#" className="text-purple-600 hover:text-purple-800">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
-                    </svg>
-                  </a>
-                  <a href="#" className="text-purple-600 hover:text-purple-800">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                    </svg>
-                  </a>
-                  <a href="#" className="text-purple-600 hover:text-purple-800">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                  </a>
+                
+                <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+                  <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500 mb-2">250+</h3>
+                  <p className="text-gray-300">Annual Events</p>
                 </div>
               </div>
             </div>
+            
+            <div className="order-1 md:order-2">
+              <p className="text-gray-300 mb-6">
+                Since our founding, Nari-Nexus has made a significant impact on the lives of women around the world. Our programs have helped thousands of women develop essential skills, build successful businesses, and advance in their careers.
+              </p>
+              
+              <p className="text-gray-300 mb-6">
+                Through our mentorship initiatives, we've facilitated meaningful connections that have led to professional growth and personal development for both mentors and mentees.
+              </p>
+              
+              <p className="text-gray-300 mb-6">
+                Our advocacy work has contributed to policy changes that promote gender equality in workplaces and communities, creating more inclusive environments for all.
+              </p>
+              
+              <Button to="/programs" size="lg">
+                Explore Our Programs
+              </Button>
+            </div>
           </div>
-        </section>
-  
-        {/* Join Us CTA */}
-        <section className="py-16 bg-gradient-to-r from-purple-700 to-pink-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Join Our Community</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Be part of a movement that's changing lives and creating opportunities for women everywhere.
+        </div>
+      </section> */}
+
+      {/* Team */}
+      {/* <section className="py-20 bg-gradient-to-b from-black to-purple-900/20 relative">
+        <GeometricBackground className="opacity-30" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <SectionTitle 
+            title="Our Team" 
+            subtitle="The People Behind Nari-Nexus"
+            centered={true}
+          />
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+            {[1, 2, 3, 4].map((item) => (
+              <div key={item} className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden group hover:border-white/20 transition-all duration-300">
+                <div className="aspect-square overflow-hidden">
+                  <img 
+                    src={`/placeholder.svg?height=300&width=300`}
+                    alt="Team member" 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-1">Sarah Johnson</h3>
+                  <p className="text-purple-400 mb-3">Co-Founder & CEO</p>
+                  <p className="text-gray-300 text-sm">Passionate about creating opportunities for women in technology and leadership.</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Button to="/team" variant="secondary" size="lg">
+              Meet Our Full Team
+            </Button>
+          </div>
+        </div>
+      </section> */}
+
+      {/* Call to Action */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto bg-gradient-to-r from-pink-500/10 via-purple-600/10 to-orange-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Join Our Mission
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Whether you're looking to grow professionally, connect with
+              like-minded women, or contribute to a movement for change, there's
+              a place for you at Nari-Nexus.
             </p>
-            <a
-              href="/join"
-              className="inline-block bg-white text-purple-700 hover:bg-purple-100 font-bold py-3 px-8 rounded-full transition-colors shadow-lg"
-            >
-              Become a Member
-            </a>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button to="/contact" size="xl">
+                Get Involved
+              </Button>
+              <Button to="/programs" variant="secondary" size="xl">
+                Support Our Work
+              </Button>
+            </div>
           </div>
-        </section>
-      </div>
-    )
-  }
-  
-  export default About
-  
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default About;

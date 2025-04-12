@@ -1,30 +1,33 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Layout from "./components/Layout"
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Initiatives from "./pages/Initiatives"
-// import SuccessStories from "./pages/SuccessStories"
-// import Events from "./pages/Events"
-// import Join from "./pages/Join"
-// import Gallery from "./pages/Gallery"
-// import Contact from "./pages/Contact"
+import { Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import About from './pages/About'
+import Programs from './pages/Programs'
+import Events from './pages/Events'
+import Resources from './pages/Resources'
+import Stories from './pages/Stories'
+import Contact from './pages/Contact'
+import Team from './pages/Team'
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="initiatives" element={<Initiatives />} />
-          {/* <Route path="success-stories" element={<SuccessStories />} />
-          <Route path="events" element={<Events />} />
-          <Route path="join" element={<Join />} />
-          <Route path="gallery" element={<Gallery />} />
-          <Route path="contact" element={<Contact />} /> */}
-        </Route>
-      </Routes>
-    </Router>
+    <div className="min-h-screen flex flex-col bg-black text-white">
+      <Navbar />
+      <div className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/stories" element={<Stories />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+      <Footer />
+    </div>
   )
 }
 
